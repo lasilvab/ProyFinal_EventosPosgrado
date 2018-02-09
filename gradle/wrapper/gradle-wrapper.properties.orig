@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+#Mon Mar 06 11:01:59 CST 2017
+=======
+#Tue May 23 18:35:18 CDT 2017
+>>>>>>> notification
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-3.3-all.zip

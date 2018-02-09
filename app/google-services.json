@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "303838155122",
+    "firebase_url": "https://login-490bb.firebaseio.com",
+    "project_id": "login-490bb",
+    "storage_bucket": "login-490bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303838155122:android:1fe0f114fef85e0c",
+        "android_client_info": {
+          "package_name": "mx.unam.posgrado.eventoscep"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303838155122-lejutp5bjsq9qirlt3rtp84fmh771otq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY_fkh4-O1hXW-4tzfY6hb339ayseAheI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

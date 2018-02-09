@@ -1,0 +1,28 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="cardviewLayoutMargin">2dp</dimen>
+    <dimen name="simpleDraweeDetails">250dp</dimen>
+    <dimen name="detailsTitleSize">20dp</dimen>
+    <dimen name="heightButtonLogin">40dp</dimen>
+    <dimen name="widthButtonLogin">300dp</dimen>
+    <dimen name="heightTextHeadLogin">32dp</dimen>
+    <dimen name="LetterSizeTextHeadLogin">28dp</dimen>
+    <dimen name="heightTextotherLogin">20dp</dimen>
+    <dimen name="LetterSizeTextotherLogin">18dp</dimen>
+    <dimen name="marginTopButtonLogin">8dp</dimen>
+    <dimen name="marginBottonButtonLogin">8dp</dimen>
+    <dimen name="heightlogologin">250dp</dimen>
+    <dimen name="widthlogologin">250dp</dimen>
+    <dimen name="heightTexLogin">22dp</dimen>
+    <dimen name="widthTextLogin">100dp</dimen>
+    <dimen name="heightEdiTxtLogin">40dp</dimen>
+    <dimen name="widthEdiTxtLogin">300dp</dimen>
+    <dimen name="sizeEdiTxtLogin">12sp</dimen>
+    <dimen name="sizetoolbarelevation">16dp</dimen>
+    <dimen name="image_height">520dp</dimen>
+    <dimen name="margin_top">16dp</dimen>
+    <dimen name="text_size">20dp</dimen>
+
+</resources>

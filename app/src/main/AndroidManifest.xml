@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="mx.unam.posgrado.eventoscep">
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="27" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <permission android:name="mx.unam.posgrado.eventoscep.permission.C2D_MESSAGE" android:protectionLevel="signature"></permission>
+    <uses-permission android:name="mx.unam.posgrado.eventoscep.permission.C2C_MESSAGE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/iccep"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name=".app.EventApplication"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <receiver android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="mx.unam.posgrado.eventoscep"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="login.LoginEventos">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.facebook.FacebookActivity"
+           android:label="@string/app_name"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name=".Principal">
+
+        </activity>
+        <!--<activity android:name=".EventoLista"/>-->
+        <activity android:name=".EventoDetails"></activity>
+        <activity android:name=".PruebaFrag">
+
+        </activity>
+        <activity android:name=".AcercaDe">
+
+        </activity>
+        <service android:name=".services.RegistrationIntentService" android:exported="false"/>
+        <service android:name=".services.TokenRefreshListenerService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"></action>
+            </intent-filter>
+        </service>
+        <service android:name=".services.NotificationsListenerService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"></action>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="io.fabric.ApiKey" android:value="a954d3ef9c7942fa502333cae3fbe8e32ebd55bd" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+    </application>
+
+</manifest>
