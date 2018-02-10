@@ -11,15 +11,19 @@ public class UserResponseWS {
     @SerializedName("id")
     @Expose
     private String id;
+
     @SerializedName("clave")
     @Expose
     private String clave;
+
     @SerializedName("nombre")
     @Expose
     private String nombre;
+
     @SerializedName("correo")
     @Expose
     private String correo;
+
     @SerializedName("url")
     @Expose
     private String url;

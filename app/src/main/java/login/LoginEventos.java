@@ -234,7 +234,7 @@ public class LoginEventos extends AppCompatActivity  implements FacebookCallback
                 public void onResponse(Call<UserResponseWS> call, Response<UserResponseWS> response) {
                     //regresa datos el webservice??
                     if (response.body() != null) {
-                        //guardar información en sharepreference
+                        //guardar información en sharedpreferences
                         Log.d("preference", "estoyen preference");
                         SharedPreferences pref = getSharedPreferences("evanPreference",Context.MODE_PRIVATE) ;
                         SharedPreferences.Editor editor = pref.edit();
