@@ -19,7 +19,7 @@
         <item
             android:id="@+id/yoUNAM"
             android:checkable="false"
-           android:title="@string/title_NavMenuYoUNAM">
+            android:title="@string/title_NavMenuYoUNAM">
         </item>
     </group>
 </menu>

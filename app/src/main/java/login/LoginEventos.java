@@ -114,7 +114,7 @@ public class LoginEventos extends AppCompatActivity  implements FacebookCallback
         setContentView(R.layout.activity_login_eventos);
         ButterKnife.bind(this);
 
-        //preguntar al share preferencesi existe un login, para ya no pedir el login
+        //verificar en sharedpreferences si existe un login, para ya no pedirlo
         SharedPreferences pref = getSharedPreferences("evanPreference", Context.MODE_PRIVATE);
         String correo = pref.getString("id", "0");
         if (correo != "0") {
@@ -125,7 +125,7 @@ public class LoginEventos extends AppCompatActivity  implements FacebookCallback
             startActivity(intent);
         }
 
-        //google
+        //Google
         //Initializing google signin option
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -133,7 +133,7 @@ public class LoginEventos extends AppCompatActivity  implements FacebookCallback
         //Initializing signinbutton
         signInButton = (SignInButton) findViewById(R.id.sign_in_button);
         signInButton.setSize(SignInButton.SIZE_WIDE);
-        signInButton.setScopes(gso.getScopeArray());
+        //signInButton.setScopes(gso.getScopeArray());
         //Initializing google api client
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .enableAutoManage(this /* FragmentActivity */, this /* OnConnectionFailedListener */)
@@ -142,7 +142,8 @@ public class LoginEventos extends AppCompatActivity  implements FacebookCallback
         //Setting onclick listener to signing button
         signInButton.setOnClickListener(this);
         //google fin
-        //para twitter
+
+        //Twitter
         Log.d ("antes twitter:" ,"antes de twiter");
 
         loginButtonTW.setCallback(new Callback<TwitterSession>() {
@@ -181,7 +182,7 @@ public class LoginEventos extends AppCompatActivity  implements FacebookCallback
         });
     }
 
-    //para revisarsi existe conexion en dispositivo
+    //para revisar si existe conexión en dispositivo
     public Boolean isConnected() {
         ConnectivityManager connectivity = (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
         if (connectivity != null) {
@@ -218,7 +219,7 @@ public class LoginEventos extends AppCompatActivity  implements FacebookCallback
         request.executeAsync();
     }
 
-    //consulta y/o guarda usuario, ycambia activity
+    //consulta y/o guarda usuario, cambia activity
     private void cambiaActivity() {
        EventInterface userInterface = EventData.getRetofitInstance(2).create(EventInterface.class);
         USERRequest userRequest = new USERRequest();
@@ -233,7 +234,7 @@ public class LoginEventos extends AppCompatActivity  implements FacebookCallback
                 public void onResponse(Call<UserResponseWS> call, Response<UserResponseWS> response) {
                     //regresa datos el webservice??
                     if (response.body() != null) {
-                        //guardar informacion en sharepreference
+                        //guardar información en sharepreference
                         Log.d("preference", "estoyen preference");
                         SharedPreferences pref = getSharedPreferences("evanPreference",Context.MODE_PRIVATE) ;
                         SharedPreferences.Editor editor = pref.edit();
@@ -273,7 +274,7 @@ public class LoginEventos extends AppCompatActivity  implements FacebookCallback
                 Snackbar.make(findViewById(android.R.id.content), e.toString(), Snackbar.LENGTH_SHORT).show();
         }
     }
-    //logeo nombre y correo normal
+    //logeo nombre y correo-e
     @OnClick(R.id.buttonaccount)
     void buttonClick() {
           try {
@@ -320,14 +321,14 @@ public class LoginEventos extends AppCompatActivity  implements FacebookCallback
     protected void onStart() {
         super.onStart();
         if (isConnected() == false  ) {
-            Snackbar.make(findViewById(android.R.id.content), "No cuenta con conexion a red", Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(findViewById(android.R.id.content), "No cuenta con conexión a red", Snackbar.LENGTH_SHORT).show();
         }
     }
 
      //google
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        Snackbar.make(findViewById(android.R.id.content), "No cuenta con conexion a red", Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(findViewById(android.R.id.content), "No cuenta con conexión a red", Snackbar.LENGTH_SHORT).show();
     }
     // google
     @Override
@@ -363,7 +364,7 @@ public class LoginEventos extends AppCompatActivity  implements FacebookCallback
             cambiaActivity();
         } else {
             //If login fails
-            Snackbar.make(findViewById(android.R.id.content), "No cuenta con conexion a red", Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(findViewById(android.R.id.content), "No cuenta con conexión a red", Snackbar.LENGTH_SHORT).show();
         }
     }
 
