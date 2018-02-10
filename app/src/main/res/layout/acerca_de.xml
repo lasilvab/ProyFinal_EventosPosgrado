@@ -94,7 +94,7 @@
         android:layout_gravity="center_horizontal"
         android:textSize="18dp"
         android:textColor="@color/colorBlue"
-        android:text="Ubicación" />
+        android:text="@string/ubication" />
 
     <LinearLayout
         android:orientation="horizontal"

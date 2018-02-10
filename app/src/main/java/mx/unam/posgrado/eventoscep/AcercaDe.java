@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -50,8 +51,10 @@ public class AcercaDe extends FragmentActivity implements OnMapReadyCallback, Vi
         setContentView(R.layout.acerca_de);
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+        int status = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(getApplicationContext());
 
-        int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getApplicationContext());
+        //int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getApplicationContext());
+        // fue deprecated
 
         if(status == ConnectionResult.SUCCESS) {
 
@@ -60,7 +63,10 @@ public class AcercaDe extends FragmentActivity implements OnMapReadyCallback, Vi
                     .findFragmentById(R.id.mapa);
             mapFragment.getMapAsync(this);
         }else{
-            Dialog dialog = GooglePlayServicesUtil.getErrorDialog(status,(Activity)getApplicationContext(),10);
+            Dialog dialog = GoogleApiAvailability.getInstance().getErrorDialog(this, status, 0);
+
+            //Dialog dialog = GooglePlayServicesUtil.getErrorDialog(status,(Activity)getApplicationContext(),10);
+            // fue deprecated
         }
 
 
