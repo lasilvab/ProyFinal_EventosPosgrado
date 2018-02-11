@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Eventos Posgrado</string>
+    <!-- <string name="facebook_app_id" translatable="false">1317356271629011</string> -->
+    <string name="facebook_app_id" translatable="false">396332600827414</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb396332600827414</string>
     <string name="txtHeadLogin">TU CUENTA</string>
     <string name="txtSubHeadLogin">Entrar con:</string>
     <string name="txtComplementLogin">---------- O BIEN ----------</string>
@@ -25,7 +28,6 @@
     <string name="txtCalendar">Agregar a calendario</string>
     <string name="msjShare">Compartir informacion del evento</string>
     <string name="server_client_id" translatable="false">641819724609-qlcbpunhd39tlsdtqg0tj55rfhtb3tam.apps.googleusercontent.com</string>
-    <string name="facebook_app_id" translatable="false">1317356271629011</string>
     <string name="EventCalendarTitle">Eventos CEP</string>
 
     <string name="title">Acerca de...</string>
