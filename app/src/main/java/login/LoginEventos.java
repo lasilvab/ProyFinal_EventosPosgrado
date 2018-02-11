@@ -65,8 +65,7 @@ import retrofit2.Call;
 import retrofit2.Response;
 
 public class LoginEventos extends AppCompatActivity  implements FacebookCallback<LoginResult>,GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
-    //private static final String TWITTER_KEY = "L7N6g1js11mcUQ3wjTPGi5nlz";
-    //private static final String TWITTER_SECRET = "hRr6K3RRe7tvftq9FpTUefX8RQUCTaIyfkW0nYmodV4P1HQN9k";
+
     private static final String TWITTER_KEY = "L7N6g1js11mcUQ3wjTPGi5nlz";
     private static final String TWITTER_SECRET = "hRr6K3RRe7tvftq9FpTUefX8RQUCTaIyfkW0nYmodV4P1HQN9k";
     CallbackManager callbackManager;
