@@ -15,8 +15,7 @@
         android:layout_width="@dimen/widthlogologin"
         android:layout_height="97dp"
         fresco:placeholderImage="@drawable/unamposgrado"
-        android:layout_gravity="center_horizontal"
-        />
+        android:layout_gravity="center_horizontal" />
     <TextView
         android:id="@+id/txtHeadLogin"
         android:layout_width="match_parent"
@@ -42,9 +41,10 @@
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/marginTopButtonLogin"
         android:layout_marginBottom="@dimen/marginBottonButtonLogin"
-        android:height="@dimen/heightButtonLogin"
         android:layout_height="@dimen/heightButtonLogin"
-        android:layout_width="@dimen/widthButtonLogin"/>
+        android:layout_width="@dimen/widthButtonLogin"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/LetterSizeTextotherLogin"/>
     <com.twitter.sdk.android.core.identity.TwitterLoginButton
         android:id="@+id/twitter_login_button"
         android:layout_gravity="center"
@@ -62,16 +62,19 @@
         android:layout_height="@dimen/heightButtonLogin"
         android:layout_width="@dimen/widthButtonLogin"
         android:textSize="@dimen/LetterSizeTextotherLogin" />
+
     <TextView
         android:id="@+id/txtComplementLogin"
         android:layout_width="match_parent"
-        android:text="@string/txtComplementLogin"
-        android:layout_marginBottom="@dimen/marginBottonButtonLogin"
-        android:textColor="@color/colortxtOthersLogin"
-        android:textSize="@dimen/LetterSizeTextotherLogin"
-        android:layout_marginTop="10dp"
         android:layout_height="@dimen/heightTextotherLogin"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/marginBottonButtonLogin"
+        android:layout_marginTop="10dp"
+        android:text="@string/txtComplementLogin"
+        android:textAlignment="center"
+        android:textColor="@color/colortxtOthersLogin"
+        android:textSize="@dimen/LetterSizeTextotherLogin" />
     <EditText
         android:id="@+id/nameLogin"
         android:layout_width="@dimen/widthEdiTxtLogin"

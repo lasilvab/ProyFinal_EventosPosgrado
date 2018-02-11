@@ -3,7 +3,7 @@
     <!-- <string name="facebook_app_id">1317356271629011</string> -->
     <string name="facebook_app_id">396332600827414</string>
     <string name="fb_login_protocol_scheme">fb396332600827414</string>
-    <string name="txtHeadLogin">YOUR ACOOUNT</string>
+    <string name="txtHeadLogin">YOUR ACCOUNT</string>
     <string name="txtSubHeadLogin">Login with:</string>
     <string name="txtComplementLogin">---------- OR ANOTHER ----------</string>
     <string name="txtLoginAccount">CREATE ACCOUNT</string>
