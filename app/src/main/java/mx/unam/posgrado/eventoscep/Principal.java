@@ -62,22 +62,24 @@ public class Principal extends AppCompatActivity {
                         //Snackbar.make(findViewById(android.R.id.content), "Eventos / convocatorias.", Snackbar.LENGTH_SHORT).show();
                         getFragmentManager().beginTransaction().replace(R.id.mainContenedor,new EventoLista()).commit();
                         return true;
+
                     case R.id.informacion:
                         Snackbar.make(findViewById(android.R.id.content), "Información.", Snackbar.LENGTH_SHORT).show();
                         Intent intent = new Intent(Principal.this, AcercaDe.class);
                         startActivity(intent);
                         //getFragmentManager().beginTransaction().replace(R.id.main_container,new AcercaDe()).commit();
-
                         return true;
 
-                    case R.id.enlaces:
+                    /*case R.id.enlaces:
                         Snackbar.make(findViewById(android.R.id.content), "Enlaces.", Snackbar.LENGTH_SHORT).show();
                         //getFragmentManager().beginTransaction().replace(R.id.activity_detalles_fldetalles,new fragmentRFavorites()).commit();
-                        return true;
+                        return true;*/
+
                     case R.id.yoUNAM:
                         Snackbar.make(findViewById(android.R.id.content), "Yo UNAM.", Snackbar.LENGTH_SHORT).show();
                         //getFragmentManager().beginTransaction().replace(R.id.activity_detalles_fldetalles,new fragment_acecade()).commit();
                         return true;
+
                     default:
                         return false;
                 }

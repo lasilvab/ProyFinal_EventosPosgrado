@@ -4,21 +4,25 @@
         <item
             android:id="@+id/eventos"
             android:checkable="false"
+            android:icon="@drawable/ic_public"
             android:title="@string/title_NavMenuevenConvoca">
         </item>
         <item
             android:id="@+id/informacion"
             android:checkable="false"
+            android:icon="@drawable/ic_public"
             android:title="@string/title_NavMenuInforma">
         </item>
-        <item
+        <!-- <item
             android:id="@+id/enlaces"
             android:checkable="false"
+            android:icon="@drawable/ic_public"
            android:title="@string/title_NavMenuEnlaces">
-        </item>
+        </item> -->
         <item
             android:id="@+id/yoUNAM"
             android:checkable="false"
+            android:icon="@drawable/ic_public"
             android:title="@string/title_NavMenuYoUNAM">
         </item>
     </group>

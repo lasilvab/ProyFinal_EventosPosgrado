@@ -278,10 +278,10 @@ public class LoginEventos extends AppCompatActivity  implements FacebookCallback
     @OnClick(R.id.buttonaccount)
     void buttonClick() {
           try {
-              Log.d("boton login","entre boton login");
+            Log.d("boton login","entre boton login");
             namesocial = namelogin.getText().toString();
             imagesocial = "http://132.248.246.61/2017/imagenes/blanco.png";
-             userid =  emailogin.getText().toString();
+            userid =  emailogin.getText().toString();
             email = emailogin.getText().toString();
             origen = "login";
             cambiaActivity();
@@ -320,7 +320,7 @@ public class LoginEventos extends AppCompatActivity  implements FacebookCallback
     @Override
     protected void onStart() {
         super.onStart();
-        if (isConnected() == false  ) {
+        if (!isConnected()) {
             Snackbar.make(findViewById(android.R.id.content), "No cuenta con conexión a red", Snackbar.LENGTH_SHORT).show();
         }
     }
@@ -355,16 +355,23 @@ public class LoginEventos extends AppCompatActivity  implements FacebookCallback
         if (result.isSuccess()) {
             //Getting google account
             GoogleSignInAccount acct = result.getSignInAccount();
+
             //Displaying name and email
-            namesocial=acct.getDisplayName();
-            imagesocial=acct.getPhotoUrl().toString();
-            userid=String.valueOf(acct.getId());
+            namesocial = acct != null ? acct.getDisplayName() : null;
+            //namesocial=acct.getDisplayName();
+
+            imagesocial = (acct != null) ? acct.getPhotoUrl().toString() : null;
+            //imagesocial=acct.getPhotoUrl().toString();
+
+            userid=String.valueOf(acct != null ? acct.getId() : null);
+            //userid=String.valueOf(acct.getId());
+
             email="google@google.com";//(acct.getEmail());
             origen="google";
             cambiaActivity();
         } else {
             //If login fails
-            Snackbar.make(findViewById(android.R.id.content), "No cuenta con conexión a red", Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(findViewById(android.R.id.content), "Hubo problema para la conexión con la cuenta", Snackbar.LENGTH_LONG).show();
         }
     }
 
